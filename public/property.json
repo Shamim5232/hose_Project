@@ -1,0 +1,186 @@
+[
+  {
+    "estate_title": "Modern Luxury Apartment",
+    "img": "https://example.com/modern_apartment.jpg",
+    "id": "001",
+    "segment_name": "Luxury",
+    "description": "Stunning contemporary apartment with panoramic city views.",
+    "price": 350000,
+    "Status": "sale",
+    "Area": "1800 sq ft",
+    "location": "Downtown Metropolis",
+    "facilities": ["living room", "swimming pool", "gym", "rooftop terrace"],
+    "rooms": 3,
+    "Owner": [
+      {
+        "Own_img": "https://example.com/downtown_loft.jpg",
+        "name": "John Doe",
+        "phone": "+1234567890",
+        "email": "johndoe@example.com",
+        "office_number": "A123",
+        "address": "123 Main Street, Downtown Metropolis"
+      }
+    ]
+  },
+  {
+    "estate_title": "Cozy Downtown Loft",
+    "img": "https://example.com/downtown_loft.jpg",
+    "id": "002",
+    "segment_name": "Urban",
+    "description": "Charming loft-style apartment in the heart of the city.",
+    "price": 2000,
+    "Status": "rent",
+    "Area": "1000 sq ft",
+    "location": "Central Business District",
+    "facilities": ["living room", "gym", "laundry room"],
+    "rooms": 1,
+    "Owner": [
+      {
+        "Own_img": "https://example.com/downtown_loft.jpg",
+        "name": "Jane Smith",
+        "phone": "+1987654321",
+        "email": "janesmith@example.com",
+        "office_number": "B456",
+        "address": "456 Downtown Avenue, Central Business District"
+      }
+    ]
+  },
+  {
+    "estate_title": "Family-Friendly Residence",
+    "img": "https://example.com/family_residence.jpg",
+    "id": "003",
+    "segment_name": "Family",
+    "description": "Spacious apartment perfect for families with children.",
+    "price": 450000,
+    "Status": "sale",
+    "Area": "2200 sq ft",
+    "location": "Suburban Neighborhood",
+    "facilities": ["living room", "playground", "parking space", "garden"],
+    "rooms": 4,
+    "Owner": [
+      {
+        "Own_img": "https://example.com/downtown_loft.jpg",
+        "name": "Alice Johnson",
+        "phone": "+1122334455",
+        "email": "alicejohnson@example.com",
+        "office_number": "C789",
+        "address": "789 Oak Street, Suburban Neighborhood"
+      }
+    ]
+  },
+  {
+    "estate_title": "Luxurious Penthouse",
+    "img": "https://example.com/luxury_penthouse.jpg",
+    "id": "004",
+    "segment_name": "Luxury",
+    "description": "Elegant penthouse offering unparalleled luxury and comfort.",
+    "price": 850000,
+    "Status": "sale",
+    "Area": "3000 sq ft",
+    "location": "Exclusive Residential Tower",
+    "facilities": ["living room", "swimming pool", "private elevator", "sauna"],
+    "rooms": 5,
+    "Owner": [
+      {
+        "Own_img": "https://example.com/downtown_loft.jpg",
+        "name": "Michael Brown",
+        "phone": "+1555666777",
+        "email": "michaelbrown@example.com",
+        "office_number": "D101",
+        "address": "101 Sky Tower, Exclusive Residential Tower"
+      }
+    ]
+  },
+  {
+    "estate_title": "Chic Urban Studio",
+    "img": "https://example.com/urban_studio.jpg",
+    "id": "005",
+    "segment_name": "Urban",
+    "description": "Stylish studio apartment ideal for young professionals.",
+    "price": 1500,
+    "Status": "rent",
+    "Area": "600 sq ft",
+    "location": "Trendy Neighborhood",
+    "facilities": ["living room", "gym", "rooftop lounge"],
+    "rooms": 1,
+    "Owner": [
+      {
+        "Own_img": "https://example.com/downtown_loft.jpg",
+        "name": "David Wilson",
+        "phone": "+1444333222",
+        "email": "davidwilson@example.com",
+        "office_number": "E202",
+        "address": "202 Trendy Street, Trendy Neighborhood"
+      }
+    ]
+  },
+  {
+    "estate_title": "Lakefront Retreat",
+    "img": "https://example.com/lakefront_retreat.jpg",
+    "id": "006",
+    "segment_name": "Vacation",
+    "description": "Tranquil apartment overlooking a serene lake.",
+    "price": 3000,
+    "Status": "rent",
+    "Area": "1500 sq ft",
+    "location": "Scenic Lake District",
+    "facilities": ["living room", "balcony", "access to lake", "barbecue area"],
+    "rooms": 2,
+    "Owner": [
+      {
+        "Own_img": "https://example.com/downtown_loft.jpg",
+        "name": "Emily Roberts",
+        "phone": "+1666777888",
+        "email": "emilyroberts@example.com",
+        "office_number": "F303",
+        "address": "303 Lake View Drive, Scenic Lake District"
+      }
+    ]
+  },
+  {
+    "estate_title": "Cosy Suburban Apartment",
+    "img": "https://example.com/suburban_apartment.jpg",
+    "id": "007",
+    "segment_name": "Family",
+    "description": "Warm and inviting apartment nestled in a quiet suburb.",
+    "price": 280000,
+    "Status": "sale",
+    "Area": "1800 sq ft",
+    "location": "Tranquil Suburbia",
+    "facilities": ["living room", "parking space", "playground", "fitness center"],
+    "rooms": 3,
+    "Owner": [
+      {
+        "Own_img": "https://example.com/downtown_loft.jpg",
+        "name": "Robert Lee",
+        "phone": "+1777888999",
+        "email": "robertlee@example.com",
+        "office_number": "G404",
+        "address": "404 Quiet Lane, Tranquil Suburbia"
+      }
+    ]
+  },
+  {
+    "estate_title": "Downtown Executive Suite",
+    "img": "https://example.com/executive_suite.jpg",
+    "id": "008",
+    "segment_name": "Luxury",
+    "description": "Executive suite designed for discerning professionals.",
+    "price": 5000,
+    "Status": "rent",
+    "Area": "2000 sq ft",
+    "location": "Central Business District",
+    "facilities": ["living room", "workspace", "concierge service", "fitness center"],
+    "rooms": 2,
+    "Owner": [
+      {
+        "Own_img": "https://example.com/downtown_loft.jpg",
+        "name": "Sarah Taylor",
+        "phone": "+1888999000",
+        "email": "sarahtaylor@example.com",
+        "office_number": "H505",
+        "address": "505 Executive Tower, Central Business District"
+      }
+    ]
+  }
+]
