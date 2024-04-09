@@ -1,11 +1,12 @@
 [
   {
     "estate_title": "Modern Luxury Apartment",
-    "img": "https://example.com/modern_apartment.jpg",
+    "img": "https://i.ibb.co/m5SBd4T/Property-8.jpg",
     "id": "001",
     "segment_name": "Luxury",
     "description": "Stunning contemporary apartment with panoramic city views.",
     "price": 350000,
+    "Bath": "5",
     "Status": "sale",
     "Area": "1800 sq ft",
     "location": "Downtown Metropolis",
@@ -13,7 +14,7 @@
     "rooms": 3,
     "Owner": [
       {
-        "Own_img": "https://example.com/downtown_loft.jpg",
+        "Own_img": "https://i.ibb.co/bQ1dj6Z/Owner-3.jpg",
         "name": "John Doe",
         "phone": "+1234567890",
         "email": "johndoe@example.com",
@@ -24,11 +25,12 @@
   },
   {
     "estate_title": "Cozy Downtown Loft",
-    "img": "https://example.com/downtown_loft.jpg",
+    "img": "https://i.ibb.co/J3kgk4y/Property-9.jpg",
     "id": "002",
     "segment_name": "Urban",
     "description": "Charming loft-style apartment in the heart of the city.",
     "price": 2000,
+    "Bath": "4",
     "Status": "rent",
     "Area": "1000 sq ft",
     "location": "Central Business District",
@@ -36,7 +38,7 @@
     "rooms": 1,
     "Owner": [
       {
-        "Own_img": "https://example.com/downtown_loft.jpg",
+        "Own_img": "https://i.ibb.co/bQ1dj6Z/Owner-3.jpg",
         "name": "Jane Smith",
         "phone": "+1987654321",
         "email": "janesmith@example.com",
@@ -47,11 +49,12 @@
   },
   {
     "estate_title": "Family-Friendly Residence",
-    "img": "https://example.com/family_residence.jpg",
+    "img": "https://i.ibb.co/hXFrc1p/Property-7.jpg",
     "id": "003",
     "segment_name": "Family",
     "description": "Spacious apartment perfect for families with children.",
     "price": 450000,
+    "Bath": "3",
     "Status": "sale",
     "Area": "2200 sq ft",
     "location": "Suburban Neighborhood",
@@ -59,7 +62,7 @@
     "rooms": 4,
     "Owner": [
       {
-        "Own_img": "https://example.com/downtown_loft.jpg",
+        "Own_img": "https://i.ibb.co/0J3K9WW/Owner-1.jpg",
         "name": "Alice Johnson",
         "phone": "+1122334455",
         "email": "alicejohnson@example.com",
@@ -70,11 +73,12 @@
   },
   {
     "estate_title": "Luxurious Penthouse",
-    "img": "https://example.com/luxury_penthouse.jpg",
+    "img": "https://i.ibb.co/PNF2yNp/Property-4.jpg",
     "id": "004",
     "segment_name": "Luxury",
     "description": "Elegant penthouse offering unparalleled luxury and comfort.",
     "price": 850000,
+    "Bath": "1",
     "Status": "sale",
     "Area": "3000 sq ft",
     "location": "Exclusive Residential Tower",
@@ -82,7 +86,7 @@
     "rooms": 5,
     "Owner": [
       {
-        "Own_img": "https://example.com/downtown_loft.jpg",
+        "Own_img": "https://i.ibb.co/0J3K9WW/Owner-1.jpg",
         "name": "Michael Brown",
         "phone": "+1555666777",
         "email": "michaelbrown@example.com",
@@ -93,11 +97,12 @@
   },
   {
     "estate_title": "Chic Urban Studio",
-    "img": "https://example.com/urban_studio.jpg",
+    "img": "https://i.ibb.co/FzgjKF9/pine-forest-bung02-460x300.jpg",
     "id": "005",
     "segment_name": "Urban",
     "description": "Stylish studio apartment ideal for young professionals.",
     "price": 1500,
+    "Bath": "3",
     "Status": "rent",
     "Area": "600 sq ft",
     "location": "Trendy Neighborhood",
@@ -105,7 +110,7 @@
     "rooms": 1,
     "Owner": [
       {
-        "Own_img": "https://example.com/downtown_loft.jpg",
+        "Own_img": "https://i.ibb.co/0J3K9WW/Owner-1.jpg",
         "name": "David Wilson",
         "phone": "+1444333222",
         "email": "davidwilson@example.com",
@@ -116,19 +121,20 @@
   },
   {
     "estate_title": "Lakefront Retreat",
-    "img": "https://example.com/lakefront_retreat.jpg",
+    "img": "https://i.ibb.co/7NQV1cD/park-house-03-460x300.jpg",
     "id": "006",
     "segment_name": "Vacation",
     "description": "Tranquil apartment overlooking a serene lake.",
     "price": 3000,
     "Status": "rent",
+    "Bath": "3",
     "Area": "1500 sq ft",
     "location": "Scenic Lake District",
     "facilities": ["living room", "balcony", "access to lake", "barbecue area"],
     "rooms": 2,
     "Owner": [
       {
-        "Own_img": "https://example.com/downtown_loft.jpg",
+        "Own_img": "https://i.ibb.co/0J3K9WW/Owner-1.jpg",
         "name": "Emily Roberts",
         "phone": "+1666777888",
         "email": "emilyroberts@example.com",
@@ -139,19 +145,20 @@
   },
   {
     "estate_title": "Cosy Suburban Apartment",
-    "img": "https://example.com/suburban_apartment.jpg",
+    "img": "https://i.ibb.co/y8QSKbG/Property-10.jpg",
     "id": "007",
     "segment_name": "Family",
     "description": "Warm and inviting apartment nestled in a quiet suburb.",
     "price": 280000,
     "Status": "sale",
+    "Bath": "2",
     "Area": "1800 sq ft",
     "location": "Tranquil Suburbia",
     "facilities": ["living room", "parking space", "playground", "fitness center"],
     "rooms": 3,
     "Owner": [
       {
-        "Own_img": "https://example.com/downtown_loft.jpg",
+        "Own_img": "https://i.ibb.co/Cz70sc4/Owner-2.jpg",
         "name": "Robert Lee",
         "phone": "+1777888999",
         "email": "robertlee@example.com",
@@ -162,19 +169,20 @@
   },
   {
     "estate_title": "Downtown Executive Suite",
-    "img": "https://example.com/executive_suite.jpg",
+    "img": "https://i.ibb.co/tcKT7Xt/property-gallery-img-1-new-460x300.jpg",
     "id": "008",
     "segment_name": "Luxury",
     "description": "Executive suite designed for discerning professionals.",
     "price": 5000,
     "Status": "rent",
+    "Bath": "3",
     "Area": "2000 sq ft",
     "location": "Central Business District",
     "facilities": ["living room", "workspace", "concierge service", "fitness center"],
     "rooms": 2,
     "Owner": [
       {
-        "Own_img": "https://example.com/downtown_loft.jpg",
+        "Own_img": "https://i.ibb.co/bQ1dj6Z/Owner-3.jpg",
         "name": "Sarah Taylor",
         "phone": "+1888999000",
         "email": "sarahtaylor@example.com",
@@ -184,3 +192,14 @@
     ]
   }
 ]
+
+
+
+
+
+
+
+
+
+
+
