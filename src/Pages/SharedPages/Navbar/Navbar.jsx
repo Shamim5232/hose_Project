@@ -1,6 +1,21 @@
-import { Link, NavLink } from "react-router-dom";
-
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import avater from "../../../assets/avater.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+  console.log(logout);
+  const handleSignOUt = () => {
+    logout()
+      .then(() => {
+        console.log("Logout Successfully");
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   const navlinks = (
     <>
       <li>
@@ -32,14 +47,16 @@ const Navbar = () => {
           Property
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          className="mx-3 navlink text-lg uppercase font-bold"
-          to="/update-profile"
-        >
-          Update Profile
-        </NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink
+            className="mx-3 navlink text-lg uppercase font-bold"
+            to="/UpdateProfile"
+          >
+            Update Profile
+          </NavLink>
+        </li>
+      )}
     </>
   );
   return (
@@ -82,17 +99,27 @@ const Navbar = () => {
         >
           <div className="w-10 rounded-full">
             <img
+              title={user?.displayName}
               alt="Tailwind CSS Navbar component"
-              src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              src={user ? user.photoURL : avater}
             />
           </div>
         </div>
-        <Link
-          className="btn bg-orange-600 rounded-none text-lg px-8 text-white"
-          to="/login"
-        >
-          Login
-        </Link>
+        {user ? (
+          <button
+            onClick={handleSignOUt}
+            className="btn bg-orange-600 rounded-none text-lg px-8 text-white"
+          >
+            Logout
+          </button>
+        ) : (
+          <Link
+            className="btn bg-orange-600 rounded-none text-lg px-8 text-white"
+            to="/login"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );

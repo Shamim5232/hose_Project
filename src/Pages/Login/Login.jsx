@@ -1,19 +1,33 @@
+import { useContext } from "react";
 import { BsGoogle } from "react-icons/bs";
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const { signInWithEmail } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
     console.log(email, password);
+    signInWithEmail(email, password)
+      .then(() => {
+        console.log("Sing In Successfully");
+        e.target.reset();
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
-    <div className="px-40 mx-auto">
+    <div className="lg:px-40 mx-auto">
       <div className="mt-20 mb-10">
-        <div className="border w-1/2 mx-auto">
+        <div className="border lg:w-1/2 mx-auto">
           <h2 className=" text-center pt-8 text-2xl font-bold">Please Login</h2>
           <form className="card-body py-0 pb-6" onSubmit={handleLogin}>
             <div className="form-control">
@@ -60,15 +74,15 @@ const Login = () => {
         </div>
       </div>
       <div className="text-center flex justify-center items-center flex-col gap-4 mb-10">
-        <button className="btn btn-outline w-1/3 rounded-full flex text-xl px-8">
+        <button className="btn btn-outline lg:w-1/3 rounded-full flex text-xl px-8">
           <BsGoogle className="text-cyan-600 mr-2"></BsGoogle> Continue with
           Google
         </button>
-        <button className="btn btn-outline w-1/3 rounded-full flex text-xl px-8">
+        <button className="btn btn-outline lg:w-1/3 rounded-full flex text-xl px-8">
           <FaFacebook className="text-cyan-600 mr-2"></FaFacebook> Continue with
           facebook
         </button>
-        <button className="btn btn-outline w-1/3 rounded-full flex text-xl px-8">
+        <button className="btn btn-outline lg:w-1/3 rounded-full flex text-xl px-8">
           <FaGithub className="text-cyan-600 mr-2"></FaGithub>{" "}
           <span>Continue with Github</span>
         </button>
