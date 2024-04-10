@@ -3,9 +3,11 @@ import { IoLocationOutline } from "react-icons/io5";
 import { IoBedOutline } from "react-icons/io5";
 import { FaBath } from "react-icons/fa";
 import { SiBlueprint } from "react-icons/si";
+import { Link } from "react-router-dom";
 const HomeCard = ({ property }) => {
   console.log(property);
   const {
+    id,
     location,
     estate_title,
     description,
@@ -48,9 +50,11 @@ const HomeCard = ({ property }) => {
           </div>
         </div>
         <div className="card-actions justify-end mt-5">
-          <button className="btn bg-orange-600 text-white">
-            View Property
-          </button>
+          <Link to={`/view-details/${id}`}>
+            <button className="btn bg-orange-600 text-white">
+              View Property
+            </button>
+          </Link>
         </div>
       </div>
     </div>

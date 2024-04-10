@@ -12,7 +12,7 @@
     "location": "Downtown Metropolis",
     "facilities": ["living room", "swimming pool", "gym", "rooftop terrace"],
     "rooms": 3,
-    "Owner": [
+    "Owner": 
       {
         "Own_img": "https://i.ibb.co/bQ1dj6Z/Owner-3.jpg",
         "name": "John Doe",
@@ -21,7 +21,7 @@
         "office_number": "A123",
         "address": "123 Main Street, Downtown Metropolis"
       }
-    ]
+    
   },
   {
     "estate_title": "Cozy Downtown Loft",
@@ -36,7 +36,7 @@
     "location": "Central Business District",
     "facilities": ["living room", "gym", "laundry room"],
     "rooms": 1,
-    "Owner": [
+    "Owner": 
       {
         "Own_img": "https://i.ibb.co/bQ1dj6Z/Owner-3.jpg",
         "name": "Jane Smith",
@@ -45,7 +45,7 @@
         "office_number": "B456",
         "address": "456 Downtown Avenue, Central Business District"
       }
-    ]
+    
   },
   {
     "estate_title": "Family-Friendly Residence",
@@ -60,7 +60,7 @@
     "location": "Suburban Neighborhood",
     "facilities": ["living room", "playground", "parking space", "garden"],
     "rooms": 4,
-    "Owner": [
+    "Owner": 
       {
         "Own_img": "https://i.ibb.co/0J3K9WW/Owner-1.jpg",
         "name": "Alice Johnson",
@@ -69,7 +69,7 @@
         "office_number": "C789",
         "address": "789 Oak Street, Suburban Neighborhood"
       }
-    ]
+    
   },
   {
     "estate_title": "Luxurious Penthouse",
@@ -84,7 +84,7 @@
     "location": "Exclusive Residential Tower",
     "facilities": ["living room", "swimming pool", "private elevator", "sauna"],
     "rooms": 5,
-    "Owner": [
+    "Owner": 
       {
         "Own_img": "https://i.ibb.co/0J3K9WW/Owner-1.jpg",
         "name": "Michael Brown",
@@ -93,7 +93,7 @@
         "office_number": "D101",
         "address": "101 Sky Tower, Exclusive Residential Tower"
       }
-    ]
+    
   },
   {
     "estate_title": "Chic Urban Studio",
@@ -108,7 +108,7 @@
     "location": "Trendy Neighborhood",
     "facilities": ["living room", "gym", "rooftop lounge"],
     "rooms": 1,
-    "Owner": [
+    "Owner": 
       {
         "Own_img": "https://i.ibb.co/0J3K9WW/Owner-1.jpg",
         "name": "David Wilson",
@@ -117,7 +117,7 @@
         "office_number": "E202",
         "address": "202 Trendy Street, Trendy Neighborhood"
       }
-    ]
+    
   },
   {
     "estate_title": "Lakefront Retreat",
@@ -132,7 +132,7 @@
     "location": "Scenic Lake District",
     "facilities": ["living room", "balcony", "access to lake", "barbecue area"],
     "rooms": 2,
-    "Owner": [
+    "Owner": 
       {
         "Own_img": "https://i.ibb.co/0J3K9WW/Owner-1.jpg",
         "name": "Emily Roberts",
@@ -141,7 +141,7 @@
         "office_number": "F303",
         "address": "303 Lake View Drive, Scenic Lake District"
       }
-    ]
+    
   },
   {
     "estate_title": "Cosy Suburban Apartment",
@@ -156,7 +156,7 @@
     "location": "Tranquil Suburbia",
     "facilities": ["living room", "parking space", "playground", "fitness center"],
     "rooms": 3,
-    "Owner": [
+    "Owner": 
       {
         "Own_img": "https://i.ibb.co/Cz70sc4/Owner-2.jpg",
         "name": "Robert Lee",
@@ -165,7 +165,7 @@
         "office_number": "G404",
         "address": "404 Quiet Lane, Tranquil Suburbia"
       }
-    ]
+    
   },
   {
     "estate_title": "Downtown Executive Suite",
@@ -180,7 +180,7 @@
     "location": "Central Business District",
     "facilities": ["living room", "workspace", "concierge service", "fitness center"],
     "rooms": 2,
-    "Owner": [
+    "Owner": 
       {
         "Own_img": "https://i.ibb.co/bQ1dj6Z/Owner-3.jpg",
         "name": "Sarah Taylor",
@@ -189,7 +189,7 @@
         "office_number": "H505",
         "address": "505 Executive Tower, Central Business District"
       }
-    ]
+    
   }
 ]
 
