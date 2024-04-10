@@ -5,7 +5,6 @@ import { FaBath } from "react-icons/fa";
 import { SiBlueprint } from "react-icons/si";
 import { Link } from "react-router-dom";
 const HomeCard = ({ property }) => {
-  console.log(property);
   const {
     id,
     location,

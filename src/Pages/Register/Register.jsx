@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { BsGoogle } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa";
+import { FaEyeSlash, FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { getAuth, updateProfile } from "firebase/auth";
 import { app } from "../../Firebase/Firebase.config";
+import { FaEye } from "react-icons/fa6";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const [shwoPass, setShowpass] = useState(false);
   const auth = getAuth(app);
   const handleRegister = (e) => {
     e.preventDefault();
@@ -29,9 +31,9 @@ const Register = () => {
       .catch((error) => console.error(error));
   };
   return (
-    <div className="lg:px-40 mx-auto">
+    <div className="lg:px-40 md:px-10 mx-auto">
       <div className="mt-16 mb-8">
-        <div className="border lg:w-1/2 mx-auto">
+        <div className="border lg:w-1/2 md:w-full mx-auto">
           <h2 className=" text-center pt-8 text-2xl font-bold">
             Please Register
           </h2>
@@ -72,17 +74,29 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control ">
               <label className="label">
                 <span className="label-text text-xl">Password</span>
               </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                className="input text-xl input-bordered"
-                required
-              />
+              <div className="relative">
+                <input
+                  type={shwoPass ? "text" : "password"}
+                  name="password"
+                  placeholder="Password"
+                  className="input w-full text-xl input-bordered"
+                  required
+                />
+                <div
+                  className="absolute top-4 right-4"
+                  onClick={() => setShowpass(!shwoPass)}
+                >
+                  {shwoPass ? (
+                    <FaEye className="text-xl"></FaEye>
+                  ) : (
+                    <FaEyeSlash className="text-xl"></FaEyeSlash>
+                  )}
+                </div>
+              </div>
             </div>
             <div className="form-control mt-6">
               <button

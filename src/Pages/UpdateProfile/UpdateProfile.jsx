@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const UpdateProfile = () => {
   const { Update } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ const UpdateProfile = () => {
         console.log("Profile Updated");
         e.target.reset();
         navigate("/UpdateProfile");
+        toast.success("Profile Updated Successfully");
       })
       .catch((error) => {
         console.log("Error");
@@ -61,6 +63,7 @@ const UpdateProfile = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

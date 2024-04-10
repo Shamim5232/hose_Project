@@ -4,7 +4,8 @@ import { FaFacebook, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
   const { signInWithEmail } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -15,10 +16,9 @@ const Login = () => {
     const password = form.get("password");
     console.log(email, password);
     signInWithEmail(email, password)
-      .then(() => {
-        console.log("Sing In Successfully");
+      .then((result) => {
+        toast.success("Logged in successfully");
         e.target.reset();
-        navigate("/");
       })
       .catch((error) => {
         console.log(error);
@@ -72,6 +72,7 @@ const Login = () => {
             </Link>
           </p>
         </div>
+        <ToastContainer />
       </div>
       <div className="text-center flex justify-center items-center flex-col gap-4 mb-10">
         <button className="btn btn-outline lg:w-1/3 rounded-full flex text-xl px-8">

@@ -2,6 +2,8 @@ import Slider from "../SharedPages/Slider/Slider";
 import { useLoaderData } from "react-router-dom";
 import HomeCard from "./HomeCard";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Home = () => {
   const PropertyData = useLoaderData();
   const [loadData, setLoadData] = useState(6);
@@ -29,6 +31,7 @@ const Home = () => {
           ""
         )}
       </div>
+      <ToastContainer />
     </div>
   );
 };
