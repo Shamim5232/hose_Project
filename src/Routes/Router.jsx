@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Details from "../Pages/Details/Details";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
+import ProtectedRoute from "./ProtectedRoute";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +26,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/view-details/:viewid",
-        element: <Details></Details>,
+        element: (
+          <ProtectedRoute>
+            <Details></Details>
+          </ProtectedRoute>
+        ),
         loader: () => fetch("/property.json"),
       },
       {

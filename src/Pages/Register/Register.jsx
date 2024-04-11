@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
-import { BsGoogle } from "react-icons/bs";
-import { FaEyeSlash, FaFacebook } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { getAuth, updateProfile } from "firebase/auth";
 import { app } from "../../Firebase/Firebase.config";
 import { FaEye } from "react-icons/fa6";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [shwoPass, setShowpass] = useState(false);
@@ -19,6 +19,13 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
     console.log(name, email, password);
+    if (password.length < 6) {
+      toast.error("Password At least have 6 character or longer");
+      return;
+    } else if (!/[A-Za-z]+$/.test(password)) {
+      toast.error("Password At least have UpperCase OR LowerCase");
+      return;
+    }
     createUser(email, password)
       .then((result) => {
         const user = result.user;
@@ -27,9 +34,12 @@ const Register = () => {
           displayName: name,
           photoURL: url,
         });
+        e.target.reset();
+        toast.success("Registration Successfully");
       })
       .catch((error) => console.error(error));
   };
+
   return (
     <div className="lg:px-40 md:px-10 mx-auto">
       <div className="mt-16 mb-8">
@@ -115,6 +125,7 @@ const Register = () => {
           </p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
