@@ -3,12 +3,15 @@ import { BsGoogle } from "react-icons/bs";
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
-  const { signInWithEmail } = useContext(AuthContext);
+  const { signInWithEmail, LoginWithGoogle, LoginWithGithub } =
+    useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -19,9 +22,30 @@ const Login = () => {
       .then((result) => {
         toast.success("Logged in successfully");
         e.target.reset();
+        navigate(location?.state ? location.state : "/");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        toast.error("User Email Or Password Incorrect");
+      });
+  };
+  const handleLoginWithGoogle = () => {
+    LoginWithGoogle()
+      .then(() => {
+        toast.success("Logged in successfully");
+        navigate("/");
+      })
+      .catch(() => {
+        toast.error("User Email Or Password Incorrect");
+      });
+  };
+  const handleLoginWithGithub = () => {
+    LoginWithGithub()
+      .then(() => {
+        toast.success("Logged in successfully");
+        navigate("/");
+      })
+      .catch(() => {
+        toast.error("User Email Or Password Incorrect");
       });
   };
   return (
@@ -72,22 +96,24 @@ const Login = () => {
             </Link>
           </p>
         </div>
-        <ToastContainer />
       </div>
       <div className="text-center flex justify-center items-center flex-col gap-4 mb-10">
-        <button className="btn btn-outline lg:w-1/3 rounded-full flex text-xl px-8">
+        <button
+          onClick={handleLoginWithGoogle}
+          className="btn btn-outline lg:w-1/3 rounded-full flex text-xl px-8"
+        >
           <BsGoogle className="text-cyan-600 mr-2"></BsGoogle> Continue with
           Google
         </button>
-        <button className="btn btn-outline lg:w-1/3 rounded-full flex text-xl px-8">
-          <FaFacebook className="text-cyan-600 mr-2"></FaFacebook> Continue with
-          facebook
-        </button>
-        <button className="btn btn-outline lg:w-1/3 rounded-full flex text-xl px-8">
+        <button
+          onClick={handleLoginWithGithub}
+          className="btn btn-outline lg:w-1/3 rounded-full flex text-xl px-8"
+        >
           <FaGithub className="text-cyan-600 mr-2"></FaGithub>{" "}
           <span>Continue with Github</span>
         </button>
       </div>
+      <ToastContainer />
     </div>
   );
 };

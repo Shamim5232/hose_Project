@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 import { getAuth, updateProfile } from "firebase/auth";
 import { app } from "../../Firebase/Firebase.config";
 import { FaEye } from "react-icons/fa6";
@@ -10,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [shwoPass, setShowpass] = useState(false);
+  const navigate = useNavigate();
   const auth = getAuth(app);
   const handleRegister = (e) => {
     e.preventDefault();
@@ -22,7 +24,7 @@ const Register = () => {
     if (password.length < 6) {
       toast.error("Password At least have 6 character or longer");
       return;
-    } else if (!/[A-Za-z]+$/.test(password)) {
+    } else if (!/[A-Za-z]/.test(password)) {
       toast.error("Password At least have UpperCase OR LowerCase");
       return;
     }
@@ -36,6 +38,7 @@ const Register = () => {
         });
         e.target.reset();
         toast.success("Registration Successfully");
+        navigate("/register");
       })
       .catch((error) => console.error(error));
   };

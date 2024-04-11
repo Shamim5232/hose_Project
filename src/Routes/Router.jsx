@@ -6,10 +6,12 @@ import Register from "../Pages/Register/Register";
 import Details from "../Pages/Details/Details";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import ProtectedRoute from "./ProtectedRoute";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

@@ -15,7 +15,7 @@ const Root = () => {
   return (
     <div className={loading ? "LoadingPosition" : ""}>
       {loading ? (
-        <RingLoader color="#36d7b7" size={100} speedMultiplier={1} />
+        <RingLoader color="#FFA500" size={100} speedMultiplier={1} />
       ) : (
         <div>
           <div className="font-popins w-full px-5 lg:px-0 lg:max-w-[95%] mx-auto">

@@ -4,12 +4,16 @@ import {
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   updateProfile,
 } from "firebase/auth";
+import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 import { app } from "../Firebase/Firebase.config";
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
+const GoogleProvider = new GoogleAuthProvider();
+const GithubProvider = new GithubAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -32,6 +36,14 @@ const AuthProvider = ({ children }) => {
       photoURL: url,
     });
   };
+
+  const LoginWithGoogle = () => {
+    return signInWithPopup(auth, GoogleProvider);
+  };
+
+  const LoginWithGithub = () => {
+    return signInWithPopup(auth, GithubProvider);
+  };
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log("Inside of OnauthStateChange", currentUser);
@@ -47,6 +59,8 @@ const AuthProvider = ({ children }) => {
     logout,
     Update,
     loading,
+    LoginWithGoogle,
+    LoginWithGithub,
   };
   return (
     <div>
