@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "property": "4",
+    "img": "https://i.ibb.co/z2wCKgD/7.png"
+  },
+  {
+    "id": 2,
+    "name": "Alice Smith",
+    "property": "2",
+    "img": "https://i.ibb.co/ZH3hSwy/6.png"
+  },
+  {
+    "id": 3,
+    "name": "Michael Johnson",
+    "property": "3",
+    "img": "https://i.ibb.co/93Th1B6/5.png"
+  },
+  {
+    "id": 4,
+    "name": "Emily Brown",
+    "property": "6",
+    "img": "https://i.ibb.co/f9sWwCc/4.png"
+  },
+  {
+    "id": 5,
+    "name": "David Wilson",
+    "property": "7",
+    "img": "https://i.ibb.co/3YyXwrK/3.png"
+  },
+  {
+    "id": 6,
+    "name": "Sarah Martinez",
+    "property": "5",
+    "img": "https://i.ibb.co/KzchGSy/2.png"
+  },
+  {
+    "id": 7,
+    "name": "Chris Thompson",
+    "property": "6",
+    "img": "https://i.ibb.co/wLBBvN4/1.png"
+  }
+]
+
+
+
+
+
+
+
+

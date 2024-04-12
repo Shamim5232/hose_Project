@@ -7,6 +7,8 @@ import Details from "../Pages/Details/Details";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import ProtectedRoute from "./ProtectedRoute";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Profile from "../Pages/Profile/Profile";
+import Agent from "../Pages/Agent/Agent";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +40,10 @@ export const router = createBrowserRouter([
       {
         path: "/UpdateProfile",
         element: <UpdateProfile></UpdateProfile>,
+      },
+      {
+        path: "/profile",
+        element: <Profile></Profile>,
       },
     ],
   },

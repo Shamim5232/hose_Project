@@ -18,13 +18,16 @@ const Navbar = () => {
   const navlinks = (
     <>
       <li>
-        <NavLink className="mx-3 navlink text-lg uppercase font-bold" to="/">
+        <NavLink
+          className="mx-2 navlink text-lg uppercase font-semibold"
+          to="/"
+        >
           Home
         </NavLink>
       </li>
       <li>
         <NavLink
-          className="mx-3 navlink text-lg uppercase font-bold"
+          className="mx-2 navlink text-lg uppercase font-semibold"
           to="/about"
         >
           About Us
@@ -32,7 +35,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          className="mx-3 navlink text-lg uppercase font-bold"
+          className="mx-2 navlink text-lg uppercase font-semibold"
           to="/blog"
         >
           Blog
@@ -40,26 +43,36 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          className="mx-3 navlink text-lg uppercase font-bold"
+          className="mx-2 navlink text-lg uppercase font-semibold"
           to="/blog"
         >
           Property
         </NavLink>
       </li>
       {user && (
-        <li>
-          <NavLink
-            className="mx-3 navlink text-lg uppercase font-bold"
-            to="/UpdateProfile"
-          >
-            Update Profile
-          </NavLink>
-        </li>
+        <>
+          <li>
+            <NavLink
+              className="mx-2 navlink text-lg uppercase font-semibold"
+              to="/UpdateProfile"
+            >
+              Update Profile
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className="mx-2 navlink text-lg uppercase font-semibold"
+              to="/profile"
+            >
+              Profile
+            </NavLink>
+          </li>
+        </>
       )}
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -80,7 +93,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu z-50 menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navlinks}
           </ul>

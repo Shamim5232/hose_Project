@@ -4,6 +4,7 @@ import HomeCard from "./HomeCard";
 import { useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Agent from "../Agent/Agent";
 const Home = () => {
   const PropertyData = useLoaderData();
   const [loadData, setLoadData] = useState(6);
@@ -37,6 +38,9 @@ const Home = () => {
         ) : (
           ""
         )}
+      </div>
+      <div className="my-5">
+        <Agent></Agent>
       </div>
       <ToastContainer />
     </div>

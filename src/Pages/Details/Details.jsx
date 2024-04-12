@@ -24,7 +24,7 @@ const Details = () => {
     <div className="my-8">
       <div className="flex justify-between items-center">
         <h2 className="text-xl lg:text-3xl font-bold my-5">{estate_title}</h2>
-        <h2 className="text-xl lg:text-3xl font-bold my-5">Price: {price}</h2>
+        <h2 className="text-xl lg:text-3xl font-bold my-5">Price: $ {price}</h2>
       </div>
       <p className="mb-2 text-lg uppercase">Status: {Status}</p>
       <div className="h-full lg:h-[500px]">
