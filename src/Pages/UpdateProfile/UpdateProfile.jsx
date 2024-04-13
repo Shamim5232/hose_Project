@@ -3,6 +3,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 const UpdateProfile = () => {
   const { Update } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -25,6 +26,7 @@ const UpdateProfile = () => {
   };
   return (
     <div className="lg:px-40 mx-auto">
+      <PageTitle title="Update Profile"></PageTitle>
       <div className="mt-20 mb-10">
         <div className="border lg:w-1/2 mx-auto">
           <h2 className=" text-center pt-8 text-2xl font-bold">

@@ -5,21 +5,17 @@ import { useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Agent from "../Agent/Agent";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 const Home = () => {
   const PropertyData = useLoaderData();
   const [loadData, setLoadData] = useState(6);
 
   return (
     <div>
+      <PageTitle title="Home"></PageTitle>
       <Slider></Slider>
       {/* real state property  */}
-      <div
-        className="my-5 py-4"
-        data-aos="fade-zoom-in"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="600"
-      >
+      <div className="my-5 py-4" data-aos="fade-in">
         <h2 className="text-xl lg:text-4xl text-center font-bold ">
           Real Estate <span className="text-orange-600">Property</span>
         </h2>

@@ -6,6 +6,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 const Login = () => {
   const { signInWithEmail, LoginWithGoogle, LoginWithGithub } =
     useContext(AuthContext);
@@ -50,6 +51,7 @@ const Login = () => {
   };
   return (
     <div className="lg:px-40 mx-auto">
+      <PageTitle title="Login"></PageTitle>
       <div className="mt-20 mb-10">
         <div className="border lg:w-1/2 mx-auto">
           <h2 className=" text-center pt-8 text-2xl font-bold">Please Login</h2>

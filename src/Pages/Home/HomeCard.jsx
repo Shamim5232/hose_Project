@@ -4,6 +4,7 @@ import { IoBedOutline } from "react-icons/io5";
 import { FaBath } from "react-icons/fa";
 import { SiBlueprint } from "react-icons/si";
 import { Link } from "react-router-dom";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 const HomeCard = ({ property }) => {
   const {
     id,
@@ -20,6 +21,7 @@ const HomeCard = ({ property }) => {
   } = property;
   return (
     <div className="card card-compact bg-base-100 shadow-xl relative">
+      <PageTitle title="Details"></PageTitle>
       <figure className="h-72">
         <img src={img} className="w-full h-full" alt={estate_title} />
       </figure>

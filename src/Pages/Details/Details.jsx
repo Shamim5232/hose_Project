@@ -1,5 +1,6 @@
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { useParams, useLoaderData } from "react-router-dom";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 const Details = () => {
   const { viewid } = useParams();
   const data = useLoaderData();
@@ -22,6 +23,7 @@ const Details = () => {
 
   return (
     <div className="my-8">
+      <PageTitle title="Home-details"></PageTitle>
       <div className="flex justify-between items-center">
         <h2 className="text-xl lg:text-3xl font-bold my-5">{estate_title}</h2>
         <h2 className="text-xl lg:text-3xl font-bold my-5">Price: $ {price}</h2>

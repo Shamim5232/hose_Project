@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 
 const Profile = () => {
   const { user, logout } = useContext(AuthContext);
@@ -17,6 +18,7 @@ const Profile = () => {
   };
   return (
     <div className="profile flex justify-center">
+      <PageTitle title="Profile"></PageTitle>
       <div className="lg:w-1/2 rounded-md border border-orange-400 shadow-sm my-8 p-8">
         <div className="w-40 h-40 rounded-md mx-auto border">
           <img src={user.photoURL} alt="" className="mx-auto rounded-lg" />

@@ -8,6 +8,7 @@ import { app } from "../../Firebase/Firebase.config";
 import { FaEye } from "react-icons/fa6";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PageTitle from "../../Components/PageTitle/PageTitle";
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const [shwoPass, setShowpass] = useState(false);
@@ -129,6 +130,7 @@ const Register = () => {
         </div>
       </div>
       <ToastContainer />
+      <PageTitle title="Register"></PageTitle>
     </div>
   );
 };
