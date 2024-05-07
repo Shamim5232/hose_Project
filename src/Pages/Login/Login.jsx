@@ -23,7 +23,9 @@ const Login = () => {
       .then((result) => {
         toast.success("Logged in successfully");
         e.target.reset();
-        navigate(location?.state ? location.state : "/");
+        setTimeout(() => {
+          navigate(location?.state ? location.state : "/");
+        }, 1000);
       })
       .catch(() => {
         toast.error("User Email Or Password Incorrect");
@@ -33,7 +35,9 @@ const Login = () => {
     LoginWithGoogle()
       .then(() => {
         toast.success("Logged in successfully");
-        navigate("/");
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);
       })
       .catch(() => {
         toast.error("User Email Or Password Incorrect");
@@ -43,7 +47,9 @@ const Login = () => {
     LoginWithGithub()
       .then(() => {
         toast.success("Logged in successfully");
-        navigate("/");
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);
       })
       .catch(() => {
         toast.error("User Email Or Password Incorrect");
